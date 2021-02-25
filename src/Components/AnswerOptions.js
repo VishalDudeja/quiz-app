@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
-import "./App.css";
-import { ProvidingAnswer } from "./App";
+import "../App.css";
+import { ProvidingAnswer } from "../App.js";
 
 function AnswerOptions(props) {
   let renderOPtions = props.allOptions;

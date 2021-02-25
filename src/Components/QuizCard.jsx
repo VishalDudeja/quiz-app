@@ -1,32 +1,27 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import AnswerOptions from "./AnswerOptions";
-import "./App.css";
+import "../App.js";
 
 function QuizCard(props) {
-  /*   let startTimer = setInterval(() => {
-    if (timer === 0) {
-      stopTimer();
-    } else {
-      let newTime = timer - 1;
-      setTimer(newTime);
-    }
-  }, 1000);
-
-  let stopTimer = () => {
-    clearInterval(startTimer);
-  }; */
-  /*  const [counter, setCounter] = useState(20);
-  React.useEffect(() => {
-    counter > 0 && setTimeout(() => setCounter(counter - 1), 1000);
-  }, [counter]);
-  
-  <span className="timer ">Time Remaining:{counter}</span>*/
-
   return (
     <>
       <div className="main-container">
         <h2>Welcome to the Quiz.</h2>
-        <span>Here is your Question and Answer options.</span>
+        <p>Here is your Question and Answer options.</p>
+        <p
+          style={{
+            textAlign: "right",
+            marginRight: "20px",
+            fontSize: "20px",
+          }}
+        >
+          Time Remaining:
+          <span
+            style={{ color: "red", fontWeight: "bolder", fontSize: "20px" }}
+          >
+            {props.timer} seconds
+          </span>
+        </p>
         <div className="question-options-card">
           <div className="question">
             <p>Question:{props.currentQuestion + 1} out of 4</p>

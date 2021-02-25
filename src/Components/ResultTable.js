@@ -1,17 +1,19 @@
 import React from "react";
-import QuestionsData from "./QuestionsData";
+import questionsData from "./QuestionsData";
 
 function ResultTable(props) {
   let answerArr = props.answers;
-  console.log(answerArr);
+  /* console.log(answerArr); */
 
   let getResult = (currentQuestion) => {
     if (
-      QuestionsData[currentQuestion].correct_answer ===
+      questionsData[currentQuestion].correct_answer ===
       answerArr[currentQuestion]
     ) {
-      console.log(QuestionsData[currentQuestion].correct_answer);
+      console.log(questionsData[currentQuestion].correct_answer);
       return "Correct";
+    } else if (answerArr[currentQuestion] === "TimeOut") {
+      return "TimeOut";
     } else if (answerArr[currentQuestion] === "Skipped") {
       return "Skipped";
     } else {
